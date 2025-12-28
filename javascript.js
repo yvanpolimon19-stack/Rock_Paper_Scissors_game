@@ -21,7 +21,7 @@ function getComputerChoice(){
         computerChoice = "scissors";
     }
     
-    computerChoice = computerChoice.toUpperCase()
+    computerChoice = computerChoice.toUpperCase();
     return computerChoice;
 }
 
@@ -37,49 +37,75 @@ function playRound(computerChoice,humanChoice){
     if(computerChoice === "ROCK"){
 
         if(humanChoice === "PAPER"){
-            console.log("HUMAN WINS!!!")
-            humanScore++
+            console.log("HUMAN WINS!!!");
+            humanScore++;
         }
         else if(humanChoice === "Scissors"){
-            console.log("COMPUTER WINS!!!")
-            computerScore++
+            console.log("COMPUTER WINS!!!");
+            computerScore++;
         }
         else if(humanChoice === "ROCK"){
-            console.log("DRAW")
+            console.log("DRAW");
         }
     }
     else if(computerChoice === "PAPER"){
 
         if(humanChoice === "SCISSORS"){
-            console.log("HUMAN WINS!!!")
-            humanScore++
+            console.log("HUMAN WINS!!!");
+            humanScore++;
         }
         else if(humanChoice === "ROCK"){
-            console.log("COMPUTER WINS!!!")
-            computerScore++
+            console.log("COMPUTER WINS!!!");
+            computerScore++;
         }
         else if(humanChoice === "PAPER"){
-            console.log("DRAW")
+            console.log("DRAW");
         }
     }
     else if(computerChoice === "SCISSORS"){
 
         if(humanChoice === "ROCK"){
-            console.log("HUMAN WINS!!!")
-            humanScore++
+            console.log("HUMAN WINS!!!");
+            humanScore++;
         }
         else if(humanChoice === "PAPER"){
-            console.log("COMPUTER WINS!!!")
-            computerScore++
+            console.log("COMPUTER WINS!!!");
+            computerScore++;
         }
         else if(humanChoice === "SCISSORS"){
-            console.log("DRAW")
+            console.log("DRAW");
         }
     }
 }
 
-const computerChoice = getComputerChoice()
-const humanChoice = getHumanChoice()
+function playGame(){
+    console.log("ROUND 1")
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
+    playRound(computerChoice, humanChoice)
+    
+    console.log("ROUND 2")
+    computerChoice = getComputerChoice();
+    humanChoice = getHumanChoice();
+    playRound(computerChoice, humanChoice)
+    
+    console.log("ROUND 3")
+    computerChoice = getComputerChoice();
+    humanChoice = getHumanChoice();
+    playRound(computerChoice, humanChoice)
+    
+    console.log("ROUND 4")
+    computerChoice = getComputerChoice();
+    humanChoice = getHumanChoice();
+    playRound(computerChoice, humanChoice)
 
-playRound(computerChoice,humanChoice)
+    console.log("ROUND 5")
+    computerChoice = getComputerChoice();
+    humanChoice = getHumanChoice();
+    playRound(computerChoice, humanChoice)
 
+    console.log("The human has " + humanScore)
+    console.log("The computer has " + computerScore)
+}
+
+playGame()
