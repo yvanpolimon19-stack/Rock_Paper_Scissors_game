@@ -1,20 +1,29 @@
 function getComputerChoice(){
-    let choice;
+    let computerChoice;
       
     let num = Math.random();
     
     if(num >= 0 && num <= 0.333 ){
 
-        choice = "rock"
+        computerChoice = "rock"
     }
     else if(num > 0.333 && num <= 0.666 ){
 
-        choice = "paper"
+        computerChoice = "paper"
     }
     else if(num > 0.666 && num < 1 ){
 
-        choice = "scissors"
+        computerChoice = "scissors"
     }
     
-    return choice
+    return computerChoice
+}
+
+function getHumanChoice(){
+
+    let humanChoice = prompt("Enter your choice (rock,paper,scissors) : ")
+
+    return humanChoice
+
+
 }
